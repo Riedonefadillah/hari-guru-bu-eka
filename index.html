@@ -27,6 +27,21 @@
 			href="style.css" />
 	</head>
 	<body>
+		<audio autoplay
+			id="backgroundMusic"
+			src="backsound-hari-guru.mp3"
+			loop
+			preload="auto"></audio>
+		<button
+			class="music-control"
+			id="musicControl"
+			type="button"
+			aria-label="Putar musik latar"
+			aria-pressed="false">
+			<span class="music-icon" aria-hidden="true">♪</span>
+			<span id="musicLabel">Putar Lagu</span>
+		</button>
+
 		<div class="page-shell">
 			<header class="topbar">
 				<a

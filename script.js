@@ -135,3 +135,52 @@ document.addEventListener("keydown", (event) => {
     }
   }
 });
+
+const musicControl = document.getElementById("musicControl");
+const musicLabel = document.getElementById("musicLabel");
+const backgroundMusic = document.getElementById("backgroundMusic");
+backgroundMusic.volume = 0.45;
+
+function setMusicPlaying(isPlaying) {
+  if (isPlaying) {
+    musicControl.classList.add("is-playing");
+  } else {
+    musicControl.classList.remove("is-playing");
+  }
+
+  musicControl.setAttribute("aria-pressed", String(isPlaying));
+  musicControl.setAttribute("aria-label", isPlaying ? "Hentikan musik latar" : "Putar musik latar");
+  musicLabel.textContent = isPlaying ? "Hentikan Lagu" : "Putar Lagu";
+}
+
+async function startMusic() {
+  await backgroundMusic.play();
+  setMusicPlaying(true);
+}
+
+function stopMusic() {
+  backgroundMusic.pause();
+  setMusicPlaying(false);
+}
+
+musicControl.addEventListener("click", () => {
+  if (backgroundMusic.paused) {
+    startMusic().catch(() => setMusicPlaying(false));
+  } else {
+    stopMusic();
+  }
+});
+
+backgroundMusic.addEventListener("play", () => {
+  musicControl.classList.add("is-playing");
+  musicControl.setAttribute("aria-pressed", "true");
+  musicControl.setAttribute("aria-label", "Hentikan musik latar");
+  musicLabel.textContent = "Hentikan Lagu";
+});
+
+backgroundMusic.addEventListener("pause", () => {
+  musicControl.classList.remove("is-playing");
+  musicControl.setAttribute("aria-pressed", "false");
+  musicControl.setAttribute("aria-label", "Putar musik latar");
+  musicLabel.textContent = "Putar Lagu";
+});

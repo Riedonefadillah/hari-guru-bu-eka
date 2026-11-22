@@ -35,6 +35,53 @@ button {
   cursor: pointer;
 }
 
+.music-control {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 9px 15px 9px 10px;
+  border: 1px solid rgba(165, 139, 104, .25);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, .94);
+  color: var(--brown);
+  box-shadow: 0 10px 30px rgba(74, 58, 40, .15);
+  backdrop-filter: blur(8px);
+  font-size: 12px;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.music-control:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+}
+
+.music-icon {
+  width: 26px;
+  height: 26px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brown);
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 15px;
+}
+
+.music-control.is-playing .music-icon {
+  background: var(--gold);
+  animation: musicPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(.88); }
+}
+
 .page-shell {
   width: min(1100px, calc(100% - 44px));
   margin: 0 auto;
