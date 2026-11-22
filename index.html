@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="theme-color"
+			content="#f7f3eb" />
+		<meta
+			name="description"
+			content="Ucapan Hari Guru untuk Bu Eka." />
+		<title>Selamat Hari Guru | Bu Eka</title>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+	</head>
+	<body>
+		<div class="page-shell">
+			<header class="topbar">
+				<a
+					class="brand"
+					href="#"
+					aria-label="Beranda"
+					>✿ <span>Untuk Bu Eka</span></a
+				>
+				<span class="topbar-note">25 NOVEMBER · HARI GURU NASIONAL</span>
+			</header>
+
+			<main>
+				<section class="hero">
+					<div class="hero-decoration hero-decoration-one">✿</div>
+					<div class="hero-decoration hero-decoration-two">✧</div>
+					<p class="eyebrow">SEBUAH PESAN KECIL PENUH MAKNA</p>
+					<h1>Selamat Hari Guru,<br /><em>Bu Eka.</em></h1>
+					<p class="hero-copy">
+						Terima kasih telah berdedikasi, berusaha keras dan selalu mengsupport PPLG. apapun ilmu yang ibu berikan kepada saya dan anak-anak PPLG itu tetap bermanfaat mau bagaimana pun itu.
+					</p>
+					<button
+						class="primary-button"
+						id="openFirstMessage">
+						Buka Pesan <span>↗</span>
+					</button>
+					<div class="hero-flower">✿</div>
+				</section>
+
+				<section
+					class="messages-section"
+					aria-labelledby="messagesHeading">
+					<div class="section-heading">
+						<p class="eyebrow">DARI HATI</p>
+						<h2 id="messagesHeading">Beberapa hal yang ingin disampaikan</h2>
+						<p>Setiap kartu menyimpan pesan sederhana untuk Bu Eka.</p>
+					</div>
+
+					<div
+						class="message-grid"
+						id="messageGrid">
+						<button
+							class="message-card"
+							data-message="thanks">
+							<span class="card-number">01</span
+							><span class="card-flower">✿</span>
+							<span class="card-title">Terima Kasih</span>
+							<span class="card-description"
+								>Untuk perhatian dan kebaikan Ibu.</span
+							>
+							<span class="card-link">Baca pesan ↗</span>
+						</button>
+						<button
+							class="message-card"
+							data-message="lesson">
+							<span class="card-number">02</span
+							><span class="card-flower">✧</span>
+							<span class="card-title">Sebuah Pelajaran</span>
+							<span class="card-description"
+								>Hal baik yang akan terus diingat.</span
+							>
+							<span class="card-link">Baca pesan ↗</span>
+						</button>
+						<button
+							class="message-card"
+							data-message="memory">
+							<span class="card-number">03</span
+							><span class="card-flower">❀</span>
+							<span class="card-title">Sebuah Kenangan</span>
+							<span class="card-description"
+								>Tentang perjalanan yang pernah dilalui.</span
+							>
+							<span class="card-link">Baca pesan ↗</span>
+						</button>
+						<button
+							class="message-card"
+							data-message="wish">
+							<span class="card-number">04</span
+							><span class="card-flower">♡</span>
+							<span class="card-title">Doa dan Harapan</span>
+							<span class="card-description"
+								>Harapan baik untuk Ibu ke depannya.</span
+							>
+							<span class="card-link">Baca pesan ↗</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="gift-section">
+					<div class="gift-mark">✿</div>
+					<p>
+						Terima Kasih 
+					</p>
+					
+				</section>
+			</main>
+
+			<footer class="footer">
+				<span>Dengan rasa hormat dan terima kasih.</span>
+				<span>✿</span>
+			</footer>
+		</div>
+
+		<div
+			class="modal"
+			id="messageModal"
+			aria-hidden="true">
+			<div
+				class="modal-backdrop"
+				data-close-modal></div>
+			<div
+				class="modal-content"
+				role="dialog"
+				aria-modal="true"
+				aria-labelledby="modalTitle"
+				tabindex="-1">
+				<button
+					class="close-button"
+					id="closeModal"
+					aria-label="Tutup pesan">
+					&times;
+				</button>
+				<span class="modal-flower">✿</span>
+				<p class="eyebrow">A MESSAGE FOR YOU</p>
+				<span
+					class="message-counter"
+					id="messageCounter"
+					>01 / 04</span
+				>
+				<h2 id="modalTitle">Judul Pesan</h2>
+				<div
+					class="modal-body"
+					id="modalBody"></div>
+				<div class="modal-navigation">
+					<button
+						class="nav-button"
+						id="prevMessage">
+						← Sebelumnya
+					</button>
+					<button
+						class="nav-button"
+						id="nextMessage">
+						Selanjutnya →
+					</button>
+				</div>
+				<button
+					class="text-button"
+					id="doneModal">
+					Tutup Pesan
+				</button>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
